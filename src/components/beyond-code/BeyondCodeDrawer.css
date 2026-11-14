@@ -1,0 +1,308 @@
+/* ==========================================================================
+   Beyond Code Information Panel / Drawer
+   Warm Garden Creative Studio theme
+   ========================================================================== */
+
+.beyond-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(38, 32, 26, 0.48);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  animation: drawerFadeIn 200ms ease;
+}
+
+@keyframes drawerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.beyond-drawer-card {
+  width: 100%;
+  max-width: 520px;
+  height: 100%;
+  background-color: #FFFFFF;
+  border-top: 4px solid #D46238;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -10px 0 36px rgba(48, 40, 30, 0.16);
+  animation: drawerSlideIn 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+@keyframes drawerSlideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Header */
+.drawer-header {
+  padding: var(--space-5) var(--space-6) var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  border-bottom: 1px solid rgba(220, 212, 198, 0.7);
+}
+
+.drawer-badge-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.drawer-category-pill {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  border: 1px solid;
+  font-weight: 600;
+}
+
+.drawer-badge-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #7A7062;
+  background-color: #FAF8F1;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(210, 200, 185, 0.7);
+}
+
+.drawer-close-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(210, 200, 185, 0.7);
+  background-color: #FAF8F1;
+  color: #2D2721;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.drawer-close-btn:hover {
+  background-color: #D46238;
+  color: #FFFFFF;
+  border-color: #D46238;
+  transform: rotate(90deg);
+}
+
+/* Title Block */
+.drawer-title-block {
+  padding: var(--space-4) var(--space-6) var(--space-3);
+}
+
+.drawer-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: 500;
+  color: #2D2721;
+  line-height: 1.2;
+}
+
+.drawer-lead-desc {
+  font-size: var(--text-sm);
+  color: #635A4F;
+  line-height: 1.6;
+  margin-top: var(--space-2);
+}
+
+/* Scrollable Body */
+.drawer-body-scrollable {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-3) var(--space-6) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.drawer-narrative-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.drawer-narrative-primary {
+  font-size: var(--text-base);
+  color: #2D2721;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.drawer-story-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.drawer-story-text {
+  font-size: var(--text-sm);
+  color: #5E564B;
+  line-height: 1.7;
+}
+
+/* Objects in Scene breakdown */
+.drawer-objects-section {
+  padding: var(--space-4);
+  background-color: #FAF7EE;
+  border: 1px solid rgba(210, 200, 185, 0.7);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.objects-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.objects-heading {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #2D2721;
+  font-weight: 600;
+}
+
+.drawer-objects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+.drawer-object-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(220, 212, 198, 0.7);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.object-name {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: #2D2721;
+}
+
+.object-detail {
+  font-size: 0.72rem;
+  color: #635A4F;
+  line-height: 1.45;
+}
+
+/* Quote */
+.drawer-quote-card {
+  border-left: 3px solid;
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-sm);
+  color: #2D2721;
+  line-height: 1.6;
+}
+
+.quote-author {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #8C8070;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-style: normal;
+}
+
+/* Tour Footer Navigation */
+.drawer-footer-tour {
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid rgba(220, 212, 198, 0.7);
+  background-color: #FAF7EE;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.tour-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.5rem 0.75rem;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(210, 200, 185, 0.7);
+  border-radius: var(--radius-md);
+  color: #2D2721;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tour-nav-btn:hover {
+  border-color: #D46238;
+  color: #D46238;
+  transform: translateY(-1px);
+}
+
+.tour-btn-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.tour-btn-text.text-right {
+  text-align: right;
+}
+
+.tour-btn-text small {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  color: #8C8070;
+}
+
+.tour-btn-text strong {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .beyond-drawer-card {
+    max-width: 100%;
+  }
+
+  .drawer-title {
+    font-size: var(--text-2xl);
+  }
+}
+

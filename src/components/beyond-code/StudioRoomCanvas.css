@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Studio Room 3D Canvas Styling — Garden Creative Studio
+   Aesthetic: Warm natural sunlight, rich greenery, terracotta & warm timber
+   ========================================================================== */
+
+.studio-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  background: radial-gradient(circle at 50% 25%, #FAF7EE 0%, #EFEBE0 60%, #E4DEC9 100%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(58, 48, 30, 0.08), 0 2px 10px rgba(58, 48, 30, 0.04);
+  border: 1px solid rgba(200, 185, 160, 0.45);
+  user-select: none;
+  touch-action: none;
+}
+
+@media (min-width: 768px) {
+  .studio-canvas-wrapper {
+    min-height: 640px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .studio-canvas-wrapper {
+    min-height: 740px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .studio-canvas-wrapper {
+    min-height: 800px;
+  }
+}
+
+.studio-canvas-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  outline: none;
+  cursor: grab;
+}
+
+.studio-canvas-wrapper canvas:active {
+  cursor: grabbing;
+}
+
+/* Loading Curtain */
+.canvas-loading-curtain {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  background-color: #FAF8F1;
+  z-index: 10;
+  animation: fadeIn 200ms ease;
+}
+
+.loading-spinner-ring {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid rgba(212, 98, 56, 0.15);
+  border-top-color: #D46238;
+  border-right-color: #E29D44;
+  animation: spinRing 0.9s linear infinite;
+}
+
+@keyframes spinRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  color: #8C4020;
+  font-weight: 500;
+}
+
+/* Hover Tooltip Tracking Mouse */
+.canvas-hover-tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.45rem 0.9rem;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid #D46238;
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 30px rgba(48, 52, 59, 0.14);
+  z-index: 20;
+  transition: border-color var(--transition-fast), opacity var(--transition-fast);
+  white-space: nowrap;
+}
+
+.tooltip-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
+}
+
+.tooltip-text-col {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.tooltip-name {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #2D2721;
+}
+
+.tooltip-action {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #7B6856;
+}
+
+/* Fallback Container for devices without WebGL */
+.webgl-fallback-container {
+  padding: var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  background-color: #FAF8F1;
+}
+
+.fallback-card {
+  max-width: 560px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+
+.fallback-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background-color: #FFF1C7;
+  color: #D46238;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.fallback-card h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: #30343B;
+  margin-bottom: var(--space-2);
+}
+
+.fallback-card p {
+  font-size: var(--text-sm);
+  color: #585E69;
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+.fallback-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+}
+
+.fallback-area-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid;
+  background-color: #FAF8F1;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: #30343B;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.fallback-area-btn:hover {
+  background-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.fallback-btn-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+

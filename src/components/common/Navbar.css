@@ -59,18 +59,18 @@
 .desktop-nav {
   display: none;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--space-6);
 }
 
-@media (min-width: 920px) {
+@media (min-width: 1040px) {
   .desktop-nav {
     display: flex;
   }
 }
 
-@media (min-width: 920px) and (max-width: 1060px) {
+@media (min-width: 1040px) and (max-width: 1180px) {
   .desktop-nav {
-    gap: var(--space-4);
+    gap: var(--space-3);
   }
   .nav-list {
     gap: var(--space-3);
@@ -83,7 +83,7 @@
 .nav-list {
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-5);
   list-style: none;
 }
 
@@ -95,6 +95,7 @@
   padding: var(--space-1) 0;
   position: relative;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -162,7 +163,7 @@
   color: var(--color-accent);
 }
 
-@media (min-width: 920px) {
+@media (min-width: 1040px) {
   .mobile-toggle {
     display: none;
   }
@@ -217,9 +218,67 @@
 .mobile-drawer-footer {
   padding-top: var(--space-4);
   border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
 .btn-full {
   width: 100%;
+}
+
+/* Beyond Code Button: Warm Terracotta / Coral Tone */
+.beyond-code-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.42rem 0.95rem;
+  background-color: #D46238; /* Warm Terracotta */
+  color: #FFFFFF;
+  border: 1px solid #D46238;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(212, 98, 56, 0.24);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.beyond-code-nav-btn:hover {
+  background-color: #B84D25;
+  border-color: #B84D25;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(212, 98, 56, 0.35);
+}
+
+.beyond-code-mobile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.2rem;
+  background-color: #D46238;
+  color: #FFFFFF;
+  border: 1px solid #D46238;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(212, 98, 56, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.beyond-code-mobile-btn:hover {
+  background-color: #B84D25;
+}
+
+.sparkle-glyph {
+  color: #FFF1C7;
+  font-size: 0.8rem;
+  display: inline-block;
 }
 

@@ -32,6 +32,11 @@ export default function Footer() {
                   </li>
                 );
               })}
+              <li>
+                <Link to="/beyond-code" className="footer-link" style={{ color: '#7654C8', fontWeight: 600 }}>
+                  Beyond Code ↗
+                </Link>
+              </li>
             </ul>
           </div>
 

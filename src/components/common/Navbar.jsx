@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, FileText, ArrowUpRight } from 'lucide-react';
+import { Menu, X, FileText, ArrowUpRight, ArrowLeft } from 'lucide-react';
 import { personalInfo } from '../../data/personal';
 import './Navbar.css';
 
@@ -11,6 +11,7 @@ export default function Navbar() {
   const location = useLocation();
 
   const isHomePage = location.pathname === '/';
+  const isBeyondCode = location.pathname === '/beyond-code';
 
   // Section IDs corresponding to navLinks in order
   const sectionIds = ['about', 'projects', 'curiosity-map', 'skills', 'education', 'contact'];
@@ -94,54 +95,76 @@ export default function Navbar() {
         {/* Brand Wordmark */}
         <Link to="/" className="brand-link" aria-label="Farheen Hawawala - Home">
           <span className="brand-name">{personalInfo.name}</span>
-          <span className="brand-tag">Engineering</span>
+          <span className="brand-tag">{isBeyondCode ? 'Beyond Code' : 'Engineering'}</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="desktop-nav" aria-label="Main Navigation">
-          <ul className="nav-list">
-            {personalInfo.navLinks.map((link) => {
-              const targetId = link.href.replace('#', '');
-              const destination = isHomePage ? link.href : `/${link.href}`;
-              const isActive = isHomePage && activeSection === targetId;
+          {!isBeyondCode && (
+            <ul className="nav-list">
+              {personalInfo.navLinks.map((link) => {
+                const targetId = link.href.replace('#', '');
+                const destination = isHomePage ? link.href : `/${link.href}`;
+                const isActive = isHomePage && activeSection === targetId;
 
-              return (
-                <li key={link.label} className="nav-item">
-                  <a
-                    href={destination}
-                    className={`nav-link ${isActive ? 'is-active' : ''}`}
-                    onClick={(e) => handleNavClick(e, link.href)}
-                    aria-current={isActive ? 'page' : undefined}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+                return (
+                  <li key={link.label} className="nav-item">
+                    <a
+                      href={destination}
+                      className={`nav-link ${isActive ? 'is-active' : ''}`}
+                      onClick={(e) => handleNavClick(e, link.href)}
+                      aria-current={isActive ? 'page' : undefined}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
 
-          {/* Resume Placeholder */}
+          {/* Header Action Buttons */}
           <div className="header-actions">
-            {personalInfo.contactLinks.resume ? (
-              <a
-                href={personalInfo.contactLinks.resume}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary resume-btn"
+            {!isBeyondCode && (
+              <Link
+                to="/beyond-code"
+                className="beyond-code-nav-btn"
+                title="Explore 3D interactive universe & creative interests"
               >
-                <FileText size={15} />
-                <span>Resume</span>
-                <ArrowUpRight size={14} />
-              </a>
-            ) : (
-              <span
-                className="btn btn-secondary resume-btn btn-disabled"
-                title="Resume file placeholder — to be attached"
-              >
-                <FileText size={15} />
-                <span>Resume</span>
-                <span className="resume-badge">Pending</span>
-              </span>
+                <span className="sparkle-glyph">✦</span>
+                <span>Go Beyond Code ↗</span>
+              </Link>
+            )}
+
+            {isBeyondCode && (
+              <Link to="/" className="btn btn-secondary resume-btn">
+                <ArrowLeft size={14} />
+                <span>Engineering Portfolio</span>
+              </Link>
+            )}
+
+            {!isBeyondCode && (
+              personalInfo.contactLinks.resume ? (
+                <a
+                  href={personalInfo.contactLinks.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary resume-btn"
+                >
+                  <FileText size={15} />
+                  <span>Resume</span>
+                  <ArrowUpRight size={14} />
+                </a>
+              ) : (
+                <span
+                  className="btn btn-secondary resume-btn btn-disabled"
+                  title="Resume file placeholder — to be attached"
+                >
+                  <FileText size={15} />
+                  <span>Resume</span>
+                  <span className="resume-badge">Pending</span>
+                </span>
+              )
             )}
           </div>
         </nav>
@@ -184,22 +207,46 @@ export default function Navbar() {
             </ul>
 
             <div className="mobile-drawer-footer">
-              {personalInfo.contactLinks.resume ? (
-                <a
-                  href={personalInfo.contactLinks.resume}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-secondary btn-full"
+              {!isBeyondCode && (
+                <Link
+                  to="/beyond-code"
+                  className="beyond-code-mobile-btn"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  <FileText size={16} />
-                  <span>View Resume (PDF)</span>
-                  <ArrowUpRight size={14} />
-                </a>
-              ) : (
-                <span className="btn btn-secondary btn-full btn-disabled">
-                  <FileText size={16} />
-                  <span>Resume (Pending File)</span>
-                </span>
+                  <span className="sparkle-glyph">✦</span>
+                  <span>Go Beyond Code ↗</span>
+                </Link>
+              )}
+
+              {isBeyondCode && (
+                <Link
+                  to="/"
+                  className="btn btn-secondary btn-full"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <ArrowLeft size={16} />
+                  <span>Return to Engineering Portfolio</span>
+                </Link>
+              )}
+
+              {!isBeyondCode && (
+                personalInfo.contactLinks.resume ? (
+                  <a
+                    href={personalInfo.contactLinks.resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary btn-full"
+                  >
+                    <FileText size={16} />
+                    <span>View Resume (PDF)</span>
+                    <ArrowUpRight size={14} />
+                  </a>
+                ) : (
+                  <span className="btn btn-secondary btn-full btn-disabled">
+                    <FileText size={16} />
+                    <span>Resume (Pending File)</span>
+                  </span>
+                )
               )}
             </div>
           </nav>
