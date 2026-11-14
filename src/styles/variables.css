@@ -1,0 +1,72 @@
+:root {
+  /* ==========================================================================
+     Farheen Hawawala — Engineering Portfolio Design Tokens
+     Warm Ivory, Muted Blue, Charcoal, Light Neutral Grey, Pure White
+     ========================================================================== */
+
+  /* Palette */
+  --color-bg: #FFFFF0;            /* Warm Ivory base */
+  --color-bg-alt: #F8F7EE;        /* Slightly deeper ivory for subtle contrast */
+  --color-surface: #FFFFFF;       /* Pure white card and modal surface */
+  --color-surface-hover: #FDFDF8; /* Hover tint */
+  --color-accent: #6D8196;        /* Muted Blue accent & interactive elements */
+  --color-accent-hover: #586B7E;  /* Deeper muted blue */
+  --color-accent-subtle: #EEF3F7; /* Light muted blue tint for badges */
+  --color-text-primary: #30343B;  /* Charcoal: high legibility, soft contrast */
+  --color-text-secondary: #585E69;/* Muted charcoal for descriptions & prose */
+  --color-text-muted: #88909B;    /* Light charcoal for metadata & dates */
+  --color-border: #E6E6E0;        /* Light neutral grey for 1px hairline dividers */
+  --color-border-subtle: #EEEEEC; /* Secondary hairline border */
+  --color-focus-ring: #6D8196;    /* Accessible focus ring */
+
+  /* Typography */
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 2rem;        /* 32px */
+  --text-4xl: 2.5rem;      /* 40px */
+  --text-5xl: 3.25rem;     /* 52px */
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;      /* 4px */
+  --space-2: 0.5rem;       /* 8px */
+  --space-3: 0.75rem;      /* 12px */
+  --space-4: 1rem;         /* 16px */
+  --space-5: 1.25rem;      /* 20px */
+  --space-6: 1.5rem;       /* 24px */
+  --space-8: 2rem;         /* 32px */
+  --space-10: 2.5rem;      /* 40px */
+  --space-12: 3rem;        /* 48px */
+  --space-16: 4rem;        /* 64px */
+  --space-20: 5rem;        /* 80px */
+  --space-24: 6rem;        /* 96px */
+
+  /* Layout & Containers */
+  --container-max-width: 1120px;
+  --container-narrow: 760px;
+  --header-height: 4.5rem;
+
+  /* Borders & Radius */
+  --border-width: 1px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Subtle, Restrained Shadows */
+  --shadow-subtle: 0 1px 3px rgba(48, 52, 59, 0.04);
+  --shadow-card: 0 2px 8px rgba(48, 52, 59, 0.05);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
+

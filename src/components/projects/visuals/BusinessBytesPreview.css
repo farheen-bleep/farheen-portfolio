@@ -1,0 +1,230 @@
+/* ==========================================================================
+   Business Bytes Architecture Visual Component Styling
+   ========================================================================== */
+
+.bytes-preview-container {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-subtle);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-8);
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .bytes-preview-container {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+.bytes-intro {
+  margin-bottom: var(--space-6);
+}
+
+.bytes-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.bytes-heading {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+.bytes-description {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+/* 4-Tier Stack Grid */
+.architecture-stack-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .architecture-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .architecture-stack-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.arch-layer-btn {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.arch-layer-btn:hover {
+  border-color: var(--color-accent);
+}
+
+.arch-layer-btn.is-active {
+  background-color: #FAF9F3;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.arch-layer-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
+}
+
+.arch-layer-btn.is-active .arch-layer-icon-wrap {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border-color: var(--color-accent);
+}
+
+.arch-layer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.arch-tier-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.arch-tier-name {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+.arch-tier-tech {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-accent);
+  margin-top: auto;
+}
+
+/* Detailed Layer Inspection Box */
+.arch-detail-card {
+  background-color: #FAF9F3;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  animation: fadeIn 200ms ease;
+}
+
+.arch-detail-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.arch-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.arch-icon-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
+}
+
+.arch-detail-tier-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.arch-detail-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.arch-detail-summary {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  line-height: 1.65;
+}
+
+.arch-responsibilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.resp-heading {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.resp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+.resp-bullet {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
