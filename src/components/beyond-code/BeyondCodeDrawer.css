@@ -215,34 +215,6 @@
   line-height: 1.45;
 }
 
-/* Quote */
-.drawer-quote-card {
-  border-left: 3px solid;
-  border-radius: var(--radius-sm);
-  padding: var(--space-4);
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.quote-text {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: var(--text-sm);
-  color: #2D2721;
-  line-height: 1.6;
-}
-
-.quote-author {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: #8C8070;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-style: normal;
-}
-
 /* Tour Footer Navigation */
 .drawer-footer-tour {
   padding: var(--space-4) var(--space-6);

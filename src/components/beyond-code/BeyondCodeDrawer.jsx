@@ -114,20 +114,6 @@ export default function BeyondCodeDrawer({
               ))}
             </div>
           </div>
-
-          {/* Personal Quote / Takeaway */}
-          {area.quote && (
-            <blockquote
-              className="drawer-quote-card"
-              style={{
-                borderLeftColor: area.accentColor,
-                backgroundColor: `${area.accentColor}0C`
-              }}
-            >
-              <p className="quote-text">"{area.quote}"</p>
-              <cite className="quote-author">— Farheen Hawawala</cite>
-            </blockquote>
-          )}
         </div>
 
         {/* Bottom Tour Navigation */}

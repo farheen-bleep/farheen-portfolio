@@ -1,7 +1,7 @@
 /**
  * Beyond Code — Interactive Creative World Data
  * Centralised content for the 6 interactive areas in the 3D isometric studio.
- * Truthful, personal, editable information reflecting Farheen's creative pursuits outside engineering.
+ * Personal, genuine stories reflecting Farheen's interests outside academics.
  */
 
 export const beyondCodeData = {
@@ -16,146 +16,140 @@ export const beyondCodeData = {
     baking: {
       id: "baking",
       name: "The Baking Corner",
-      category: "Culinary Craft & Science",
-      accentColor: "#FF795D", // Coral
-      secondaryColor: "#FFF1C7", // Butter yellow
-      badge: "Recipes & Science",
+      category: "Baking & Treats",
+      accentColor: "#D46238", // Terracotta / warm coral
+      secondaryColor: "#FFF1C7",
+      badge: "In The Kitchen",
       icon: "Cookie",
-      shortDescription: "Precision measurements, yeast dough fermentation, and the dream of an artisanal venture.",
+      shortDescription: "Cakes, cookies, cinnamon rolls, churros, and trying out new recipes.",
       fullNarrative:
-        "Baking is where my love for structural precision and sensory creativity meet. Much like engineering, baking is grounded in chemistry—hydration ratios, oven temperatures, exact gram scales, and fermentation timings. But unlike software, you can taste the finished iteration.",
+        "I've been interested in baking for a while now, and it's something I genuinely enjoy spending time on. There's something really comforting about putting ingredients together, watching them bake in the oven, and seeing how they turn out.",
       story: [
-        "I find immense joy in perfecting recipes from scratch: slow-fermented focaccia with rosemary and flaky salt, cardamom-infused cinnamon twists, and delicate French macarons with crisp feet and chewy centers.",
-        "Beyond a weekend hobby, baking represents my entrepreneurial curiosity—the tangible ambition of one day building an independent bakery or artisanal pastry brand that pairs uncompromising flavor with thoughtful aesthetic packaging."
+        "I bake different kinds of things depending on what I'm in the mood for—cakes, cookies, cinnamon rolls, and even churros. A little achievement I'm really proud of is winning first prize in a cupcake decorating competition back in school. It was so much fun working on the piping, colors, and all the tiny details.",
+        "Most of all, I love experimenting in the kitchen. Whether it's testing a new recipe, tweaking flavors, or trying out creative decorations, I always look forward to trying something different."
       ],
       objects: [
-        { name: "Pastel Oven", detail: "Mint countertop convection oven calibrated for artisan breads and pastries." },
-        { name: "Ceramic Mixing Bowls", detail: "Stacked ceramic prep bowls with sourdough starter and whipped batter." },
-        { name: "Baking Sheet & Whisk", detail: "Stainless steel balloon whisk and golden cookies fresh off the cooling rack." },
-        { name: "Glass Ingredient Jars", detail: "Labeled jars of unbleached bread flour, vanilla bean pods, and raw cane sugar." }
-      ],
-      quote: "Baking is delicious chemistry—where 2 grams of yeast and 12 hours of patience create magic."
+        { name: "Countertop Oven", detail: "Where the cakes, cookies, and cinnamon rolls get baked." },
+        { name: "Mixing Bowls", detail: "Ceramic bowls for mixing dough, batter, and frostings." },
+        { name: "Baking Tray & Cookies", detail: "A fresh batch of chocolate-chunk cookies straight out of the oven." },
+        { name: "Ingredient Canisters", detail: "Glass jars filled with flour, sugar, and everyday baking essentials." }
+      ]
     },
 
     writing: {
       id: "writing",
       name: "The Writing Desk",
-      category: "Essays & Reflection",
+      category: "Essays & Reviews",
       accentColor: "#7654C8", // Violet
-      secondaryColor: "#FAF8F1", // Warm cream
-      badge: "Substack & Essays",
+      secondaryColor: "#FAF8F1",
+      badge: "Substack & Fable",
       icon: "PenTool",
-      shortDescription: "Reflective essays, Substack dispatches, and thinking out loud through the written word.",
+      shortDescription: "Book reviews on Fable, essays on Substack, and favorite stories.",
       fullNarrative:
-        "Writing is my tool for making sense of the world. While code communicates with computers, writing bridges human intent, ambiguity, and emotion. My writing desk is a dedicated space for drafting long-form essays, organizing raw observations, and exploring ideas at the intersection of technology, philosophy, and personal growth.",
+        "This desk brings together two things I spend a lot of my free time on: reading and writing. Whenever I finish a book, I almost always have strong thoughts about it—what pulled me in, what didn't work, and what stayed with me after turning the last page.",
       story: [
-        "Through personal essays and Substack writing, I explore questions around craft, learning in public, architectural discipline, and the quiet beauty of everyday curiosities.",
-        "Putting thoughts into complete paragraphs forces intellectual honesty: if an idea cannot be explained clearly on paper, it usually isn't fully understood yet."
+        "I post my book reviews on Fable, where I share honest opinions and break down what I liked and didn't like about the stories I read. When it comes to reading preferences, my favorite genres are fantasy, fiction, whodunnits, and murder mysteries. I'm a huge fan of Agatha Christie for clever mysteries where every clue matters, and Leigh Bardugo for immersive fantasy worlds and memorable characters.",
+        "Alongside reviewing books, I enjoy writing essays on Substack. It's a space where I can put my thoughts into words, explore personal topics, and write about things that interest me. I also spend a lot of time reading other people's essays on Substack—it's become one of my favorite places to discover good writing."
       ],
       objects: [
-        { name: "Open Leather Notebook", detail: "Fountain pen annotations, margin reflections, and structural drafts." },
-        { name: "Writing Laptop", detail: "Minimal markdown editor open to latest Substack essay in progress." },
-        { name: "Brass Desk Lamp", detail: "Warm focused task light illuminating late-night thought sessions." },
-        { name: "Scattered Index Cards", detail: "Quick thesis outlines, memorable quotes, and essay prompts." }
-      ],
-      quote: "Clear writing is the ultimate debugging tool for thought."
+        { name: "Journal & Fountain Pen", detail: "Where I jot down thoughts and notes right after finishing a book." },
+        { name: "Laptop", detail: "Used for drafting Substack essays and posting book reviews on Fable." },
+        { name: "Architect's Lamp", detail: "A warm brass desk lamp for late-night reading and writing sessions." },
+        { name: "Notes & Bookmarks", detail: "Sticky notes with favorite lines, bookmarks, and everyday pens." }
+      ]
     },
 
     reading: {
       id: "reading",
       name: "The Reading Nook",
-      category: "Literature & Inquiry",
+      category: "Quiet Corner",
       accentColor: "#36AFA0", // Teal
-      secondaryColor: "#FFF1C7", // Butter yellow
-      badge: "Books & Stories",
+      secondaryColor: "#FFF1C7",
+      badge: "Books & Chai",
       icon: "BookOpen",
-      shortDescription: "Speculative fiction, memoirs, design theory, and annotated physical paperbacks.",
+      shortDescription: "Getting lost in fantasy worlds and solving mysteries before the end.",
       fullNarrative:
-        "My reading corner is a sanctuary of quiet focus. I gravitate toward books that expand worldview—from thought-provoking speculative fiction and psychological realism to design philosophy, biographies, and historical narratives.",
+        "While my desk is where I review and write about books, this corner is purely for getting lost in a good story. Reading has always been my favorite way to take a break, slow down, and immerse myself in another world for a few hours.",
       story: [
-        "I believe reading widely outside computer science makes you a significantly better engineer and thinker. Reading fiction cultivates empathy and an appreciation for human nuance, while architectural and design literature teaches the value of restraint, proportion, and form.",
-        "I love physical books: dog-eared corners, pencil underlinings in the margins, and the tangible weight of turning a paper page."
+        "I love escaping into fantasy and fiction, especially stories with rich worldbuilding like Leigh Bardugo's books. At the same time, I have a big soft spot for murder mysteries and whodunnits. With Agatha Christie novels, half the fun is trying to piece together the clues and figure out what is happening before the big reveal at the end.",
+        "All I really need is a cozy chair, a warm cup of chai, and a paperback that keeps me turning pages."
       ],
       objects: [
-        { name: "Looming Bookshelf", detail: "Shelves packed with philosophy, classic literature, and design histories." },
-        { name: "Cozy Armchair", detail: "Comfortable cushioned reading chair draped with a textured warm throw." },
-        { name: "Side Table & Tea Cup", detail: "Ceramic mug of spiced chai resting on a stack of current weekend reads." },
-        { name: "Curved Floor Lamp", detail: "Gentle ambient reading light casting a soft glow over the corner." }
-      ],
-      quote: "To read is to inhabit other minds, eras, and dimensions without leaving your chair."
+        { name: "Bookshelf", detail: "Packed with fantasy series, paperbacks, and classic murder mysteries." },
+        { name: "Wingback Armchair", detail: "A deep, comfortable chair with a warm cushion for long reading sessions." },
+        { name: "Chai Mug & Side Table", detail: "A hot cup of chai always within reach beside whatever book I'm reading." },
+        { name: "Floor Lamp", detail: "A tall arched lamp that casts a gentle glow over the armchair." }
+      ]
     },
 
     photography: {
       id: "photography",
       name: "The Photography Corner",
-      category: "Visual Storytelling",
+      category: "Visual Creativity",
       accentColor: "#4267C8", // Blue
-      secondaryColor: "#FF795D", // Coral
-      badge: "Moments & Light",
+      secondaryColor: "#FF795D",
+      badge: "Everyday Moments",
       icon: "Camera",
-      shortDescription: "Street photography, geometric shadows, candid portraits, and visual storytelling.",
+      shortDescription: "Capturing everyday scenes, interesting angles, and small visual details.",
       fullNarrative:
-        "Photography taught me to look at light before looking at objects. It is the practice of noticing what everyone else walks right past—how morning sun slices through concrete balconies, the geometry of shadows on city streets, and spontaneous, unposed expressions.",
+        "Photography is something I enjoy simply for the love of noticing things around me. It encourages me to slow down and appreciate visual details that are easy to overlook in the middle of a busy day.",
       story: [
-        "I enjoy street and architectural photography because they reward patience and keen observation. You don't create the scene; you wait for composition, timing, and emotion to align in a single frame.",
-        "This visual discipline feeds directly back into my engineering work—training my eye for micro-spacing, visual balance, and clean composition in digital interfaces."
+        "I like taking photos of everyday moments—interesting shadows on a wall, sunlight filtering through trees, a quiet street corner, or candid photos with friends and family. I don't worry about having fancy equipment; for me, it's mostly about spotting an angle or a composition that catches my eye and saving that small slice of time.",
+        "It's a relaxed, creative outlet that keeps me observant and gives me a way to collect memories from ordinary days."
       ],
       objects: [
-        { name: "Rangefinder Camera", detail: "Compact 35mm prime lens camera used for daily street exploration." },
-        { name: "Cork Pinboard", detail: "Curated Polaroid prints, film contact sheets, and color studies." },
-        { name: "Stacked Photo Albums", detail: "Archival albums containing chronologically cataloged memory prints." },
-        { name: "Light Leaks & Prints", detail: "Framed black-and-white architectural compositions on the wall." }
-      ],
-      quote: "Photography is the art of seeing the extraordinary hidden within everyday stillness."
+        { name: "Camera on Tripod", detail: "A camera ready to grab whenever an interesting scene catches my eye." },
+        { name: "Cork Board with Snapshots", detail: "Polaroid-style prints and small photo memories pinned up on the wall." },
+        { name: "Photo Albums", detail: "Collected prints from everyday outings, family gatherings, and trips." },
+        { name: "Framed Prints", detail: "A couple of favorite photo prints hanging beside the window." }
+      ]
     },
 
     workshop: {
       id: "workshop",
       name: "The Creative Workshop",
-      category: "Jewellery & Material Craft",
-      accentColor: "#F19BC0", // Pink
-      secondaryColor: "#7654C8", // Violet
-      badge: "Jewellery Design",
+      category: "Jewellery & Craft",
+      accentColor: "#F19BC0", // Warm pink
+      secondaryColor: "#7654C8",
+      badge: "Jewellery Making",
       icon: "Sparkles",
-      shortDescription: "Handcrafted jewellery, wire manipulation, organic beads, and brand ideation.",
+      shortDescription: "Working with metals, soldering, stones, and sea glass.",
       fullNarrative:
-        "My jewellery workbench is a celebration of tactile making. Working with physical materials—pliers, gold-filled wire, semi-precious beads, and freshwater pearls—provides an immediate, tactile counterbalance to writing abstract code on a screen.",
+        "I love experimenting with jewellery-making. It started out of simple curiosity, and over time it has grown into one of my favorite creative hobbies. I really enjoy the hands-on feeling of working with raw materials and figuring out how to turn an idea into a finished piece.",
       story: [
-        "I design and handcraft contemporary jewellery pieces that balance delicate wire loops with bold geometric contrasts. Each piece begins with rough pencil sketches on graph paper before being hand-manipulated with precision pliers.",
-        "I am actively developing concepts for an independent boutique jewellery brand, exploring packaging typography, organic material sourcing, and tactile unboxing experiences."
+        "I especially enjoy working with different metals. I've been experimenting with shaping metal strips and learning how to use soldering to join pieces together cleanly. I also love bringing in stones and pieces of sea glass, exploring different combinations of textures, colors, and shapes to see what works well together.",
+        "Right now, it's all about trying new designs and enjoying the creative process. Looking ahead, I'm definitely interested in the possibility of developing my own jewellery brand in the future, but for now I'm just having fun learning and seeing what I can make."
       ],
       objects: [
-        { name: "Crafting Workbench", detail: "Oak work surface fitted with precision pliers, cutters, and measuring calipers." },
-        { name: "Organizer Compartments", detail: "Clear acrylic trays sorted with glass beads, pearls, and metallic findings." },
-        { name: "Sketch Pad & Caliper", detail: "Hand-drawn earring and necklace schematics with proportion notations." },
-        { name: "Display Bust", detail: "Linen display neck showcasing a finished handcrafted pendant necklace." }
-      ],
-      quote: "Crafting by hand reminds me that true beauty lives in tactile imperfection and meticulous care."
+        { name: "Jeweller's Workbench", detail: "My work table equipped with pliers, cutters, and shaping tools." },
+        { name: "Stones & Sea Glass Trays", detail: "Compartment trays sorted with collected stones, beads, and sea glass." },
+        { name: "Metal Strips & Wire", detail: "Spools of wire and thin metal strips ready for bending and soldering." },
+        { name: "Necklace Display Bust", detail: "A linen bust to test out pendants and see how finished designs hang." }
+      ]
     },
 
     personal: {
       id: "personal",
       name: "The Personal Corner",
-      category: "Athletics & Milestones",
-      accentColor: "#F5B72F", // Mango yellow
-      secondaryColor: "#36AFA0", // Teal
-      badge: "Sports & Milestones",
+      category: "Sports & Puzzles",
+      accentColor: "#F5B72F", // Mango yellow / amber
+      secondaryColor: "#36AFA0",
+      badge: "Games & Milestones",
       icon: "Award",
-      shortDescription: "Volleyball teamwork, school elocution milestones, trophies, and lifelong keepsakes.",
+      shortDescription: "Volleyball, board games, Sudoku puzzles, and school elocution.",
       fullNarrative:
-        "This corner holds the memories and athletic pursuits that shaped my discipline and grit. Long before engineering exams or production code, competitive sports and stage elocution taught me how to handle pressure, communicate clearly, and rally teammates when the score was against us.",
+        "Outside of academics and creative work, I like staying active and challenging myself with different games and activities.",
       story: [
-        "Volleyball taught me split-second spatial awareness, collective trust, and relentless hustle. You can't play volleyball alone—every point depends on communication, clean passes, and trusting your teammate to cover the court.",
-        "School elocution competitions and extracurricular leadership built the confidence to articulate complex ideas clearly—a skill that continues to serve me in engineering presentations and collaborative team environments."
+        "When it comes to sports, I really enjoy playing volleyball. It's fast, energising, and a lot of fun when you're playing with a team and working together to keep the ball in play.",
+        "On quieter days, I love sitting down with puzzles—especially Sudoku. I'm also quite serious about board games and genuinely enjoy playing them with friends and family. I like the challenge of figuring things out, planning a couple of moves ahead, and playing games that require some thought and strategy.",
+        "Public speaking is another interest I've carried with me since school. I took part in elocution competitions and ended up winning first prize twice—once speaking in English and once in Hindi. Speaking in front of a room was nerve-racking at the start, but it helped me build confidence and is an experience I look back on with a lot of pride."
       ],
       objects: [
-        { name: "Volleyball", detail: "Well-loved leather volleyball with match-worn scuffs and court memories." },
-        { name: "Trophy & Ribbon", detail: "Engraved inter-school athletics medals and elocution tournament awards." },
-        { name: "Framed Certificate", detail: "Academic distinction certificates and tournament participation badges." },
-        { name: "Memory Keepsake Box", detail: "Wooden memory chest holding handwritten notes, pins, and school badges." }
-      ],
-      quote: "Athletics taught me that teamwork, resilience, and composure under pressure matter in every arena."
+        { name: "Volleyball", detail: "From games with friends and practice on the court." },
+        { name: "Trophy & Medals", detail: "Keepsakes from school elocution competitions in English and Hindi." },
+        { name: "Puzzles & Board Games", detail: "Sudoku booklets and strategy board games for family game nights." },
+        { name: "Memory Chest", detail: "A wooden box holding school badges, pins, and little keepsakes." }
+      ]
     }
   }
 };
-
